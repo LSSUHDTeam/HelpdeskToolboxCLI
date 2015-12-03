@@ -81,7 +81,8 @@ namespace hdtoolbox
     #ifdef _WIN32
         return HDTBReturnItem(HDTB_RETURN_BAD, "Not yet programmed");
     #elif __APPLE__
-        return errorHandler.generateGenericError("OS not yet supported");
+        system("lib/software/removeJavaMac.sh");
+        return HDTBReturnItem(HDTB_RETURN_GOOD, "");
     #else
         return errorHandler.generateGenericError("OS not supported");
     #endif

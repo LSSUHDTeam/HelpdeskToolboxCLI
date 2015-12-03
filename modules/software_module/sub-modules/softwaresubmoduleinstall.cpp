@@ -77,7 +77,8 @@ namespace hdtoolbox
             system("start lib\\software\\fixJava.bat");
             return HDTBReturnItem(HDTB_RETURN_GOOD, "");
         #elif __APPLE__
-            return errorHandler.generateGenericError("OS not yet supported");
+            system("lib/software/installJavaMac.sh");
+            return HDTBReturnItem(HDTB_RETURN_GOOD, "");
         #else
             return errorHandler.generateGenericError("OS not supported");
         #endif

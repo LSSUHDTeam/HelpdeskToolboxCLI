@@ -73,5 +73,8 @@ DISTFILES += \
     modules/help_module/pages/network \
     lib/machine/editUAC.bat \
     lib/machine/performUpdates.ps1 \
-    lib/software/installJava.ps1
+    lib/software/installJava.ps1 \
+    lib/software/installJavaMac.sh \
+    lib/software/removeJavaMac.sh \
+    lib/software/fixJavaMac.sh
 
