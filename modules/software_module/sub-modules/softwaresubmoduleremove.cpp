@@ -91,7 +91,7 @@ namespace hdtoolbox
     HDTBReturnItem SoftwareSubModuleRemove::removeKACE()
     {
     #ifdef _WIN32
-        std::string exec = ("start powershell.exe -ExecutionPolicy Bypass -File lib\\software\\removeKACEWin.ps1");
+        std::string exec = ("start powershell.exe -ExecutionPolicy Bypass -File lib\\software\\removeKACEWin.ps1 \n");
         system(exec.c_str());
 
         return HDTBReturnItem(HDTB_RETURN_GOOD, "");

@@ -87,7 +87,10 @@ namespace hdtoolbox
     HDTBReturnItem SoftwareSubModuleInstall::installKACE()
     {
         #ifdef _WIN32
-            return HDTBReturnItem(HDTB_RETURN_BAD, "Not yet programmed");
+        std::string exec = ("start powershell.exe -ExecutionPolicy Bypass -File lib\\software\\installKACEWin.ps1 \n" );
+        system(exec.c_str());
+
+        return HDTBReturnItem(HDTB_RETURN_GOOD, "");
         #elif __APPLE__
             return errorHandler.generateGenericError("OS not yet supported");
         #else

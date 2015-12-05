@@ -77,5 +77,6 @@ DISTFILES += \
     lib/software/installJavaMac.sh \
     lib/software/removeJavaMac.sh \
     lib/software/fixJavaMac.sh \
-    lib/software/removeKACEWin.ps1
+    lib/software/removeKACEWin.ps1 \
+    lib/software/installKACEWin.ps1
 
