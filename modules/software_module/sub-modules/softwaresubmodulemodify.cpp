@@ -77,21 +77,8 @@ namespace hdtoolbox
             return HDTBReturnItem(HDTB_RETURN_GOOD, "");
 
         #elif __APPLE__
-
-            std::string reply;
-            std::cout << std::endl
-            /*  J  */ << std::endl
-            /*  A  */ << "This has not been fully tested, and might not fix the issue. Continue ?  (y/n)"
-            /*  B  */ << std::endl
-            /*  :) */ << std::endl;
-            std::cin >> reply;
-            if(reply != "y")
-                return errorHandler.generateGenericError("Canceled fixJava");
-
-            // Attempt to fix java
-            system("cp -a lib\\software\\deployment.properties ${deployment.java.home}/lib/deploy/deployment.properties");
-
-            return errorHandler.generateGenericError("[UNDER CONSTRUCTION] - fixJava ran, who knows how it ended up");
+            system("lib/software/fixJavaMac.sh");
+            return HDTBReturnItem(HDTB_RETURN_GOOD, "");
         #else
             return errorHandler.generateGenericError("OS not supported");
         #endif

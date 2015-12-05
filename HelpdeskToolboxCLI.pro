@@ -72,5 +72,12 @@ DISTFILES += \
     lib/machine/cleanup.bat \
     modules/help_module/pages/network \
     lib/machine/editUAC.bat \
-    lib/machine/performUpdates.ps1
+    lib/machine/performUpdates.ps1 \
+    lib/software/installJava.ps1 \
+    lib/software/installJavaMac.sh \
+    lib/software/removeJavaMac.sh \
+    lib/software/fixJavaMac.sh \
+    lib/software/removeKACEWin.ps1 \
+    lib/software/installKACEWin.ps1 \
+    lib/software/removeAviraWin.ps1
 
